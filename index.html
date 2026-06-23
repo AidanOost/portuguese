@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation Portuguese — Study Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1E9;--paper-2:#FBF9F4;--ink:#23314B;--ink-soft:#5C6678;
+    --cobalt:#2C5AA0;--cobalt-deep:#1B3B72;--glaze:#DDE7F3;--glaze-line:#C2D2E8;
+    --gold:#B07A2B;--rule:#E2DCCE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;
+    min-height:100vh;display:flex;flex-direction:column}
+  .masthead{padding:64px 24px 30px;text-align:center;
+    background:radial-gradient(circle at 50% -30%, var(--glaze), transparent 62%),var(--paper)}
+  .tile{width:54px;height:54px;color:var(--cobalt);opacity:.55;display:block;margin:0 auto 16px}
+  .kicker{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--cobalt);font-weight:600;margin:0 0 14px}
+  .masthead h1{font-family:"Fraunces",Georgia,serif;font-weight:500;
+    font-size:clamp(2.3rem,7vw,3.6rem);line-height:1.04;margin:0;color:var(--cobalt-deep)}
+  .masthead h1 em{font-style:italic;color:var(--cobalt)}
+  .sub{margin:16px auto 0;max-width:30rem;color:var(--ink-soft);font-size:.96rem}
+
+  main{max-width:680px;margin:0 auto;padding:14px 18px 70px;width:100%}
+  .card{display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;
+    background:var(--paper-2);border:1px solid var(--rule);border-radius:16px;
+    padding:20px 22px;margin:14px 0;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(27,59,114,.08);border-color:var(--glaze-line)}
+  .num{font-family:"Fraunces",Georgia,serif;font-weight:500;font-style:italic;
+    font-size:1.9rem;color:var(--cobalt);width:42px;flex:0 0 auto;text-align:center}
+  .card-body{flex:1}
+  .card-title{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.3rem;color:var(--cobalt-deep);margin:0}
+  .card-desc{margin:3px 0 0;color:var(--ink-soft);font-size:.9rem}
+  .arrow{color:var(--cobalt);font-size:1.4rem;flex:0 0 auto;opacity:.7}
+
+  footer{margin-top:auto;text-align:center;padding:26px 20px 36px;color:var(--ink-soft);font-size:.8rem;max-width:32rem;margin-left:auto;margin-right:auto}
+</style>
+</head>
+<body>
+  <header class="masthead">
+    <svg class="tile" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M50 8 C58 28 72 42 92 50 C72 58 58 72 50 92 C42 72 28 58 8 50 C28 42 42 28 50 8 Z"/><circle cx="50" cy="50" r="9"/></g></svg>
+    <p class="kicker">Michel Thomas Method · Foundation</p>
+    <h1>Portuguese<br><em>study notes</em></h1>
+    <p class="sub">European Portuguese. Three companions to use alongside the audio course.</p>
+  </header>
+  <main>
+    <a class="card" href="./portuguese-foundation.html">
+      <span class="num">I</span>
+      <span class="card-body">
+        <p class="card-title">Track-by-track notes</p>
+        <p class="card-desc">Follow the audio, hour by hour and track by track.</p>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a class="card" href="./portuguese-verb-tables.html">
+      <span class="num">II</span>
+      <span class="card-body">
+        <p class="card-title">Verb tables</p>
+        <p class="card-desc">Every ending, every tense, the three groups side by side.</p>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a class="card" href="./portuguese-question-words.html">
+      <span class="num">III</span>
+      <span class="card-body">
+        <p class="card-title">Question words</p>
+        <p class="card-desc">Ask anything — what, who, where, when, why, how.</p>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+  </main>
+  <footer>Personal study notes, rebuilt from the Michel Thomas Foundation Portuguese course.</footer>
+</body>
+</html>

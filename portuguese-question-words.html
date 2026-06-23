@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation Portuguese — Question Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1E9;--paper-2:#FBF9F4;--ink:#23314B;--ink-soft:#5C6678;
+    --cobalt:#2C5AA0;--cobalt-deep:#1B3B72;--glaze:#DDE7F3;--glaze-line:#C2D2E8;
+    --gold:#B07A2B;--rule:#E2DCCE;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+
+  .masthead{padding:54px 24px 26px;text-align:center;
+    background:radial-gradient(circle at 50% -40%, var(--glaze), transparent 60%),var(--paper)}
+  .kicker{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--cobalt);font-weight:600;margin:0 0 14px}
+  .masthead h1{font-family:"Fraunces",Georgia,serif;font-weight:500;
+    font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.04;margin:0;color:var(--cobalt-deep)}
+  .masthead h1 em{font-style:italic;color:var(--cobalt)}
+  .sub{margin:16px auto 0;max-width:30rem;color:var(--ink-soft);font-size:.94rem}
+
+  .navbar{position:sticky;top:0;z-index:20;background:rgba(244,241,233,.86);
+    backdrop-filter:blur(10px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .navbar-inner{max-width:760px;margin:0 auto;padding:9px 16px;display:flex;align-items:center;gap:10px}
+  .navbar-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+  .nav-pills{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+  .nav-pills::-webkit-scrollbar{display:none}
+  .nav-pill{flex:0 0 auto;padding:5px 13px;border-radius:20px;text-decoration:none;
+    font-weight:600;font-size:.82rem;color:var(--cobalt);border:1px solid var(--glaze-line);
+    background:var(--paper-2);white-space:nowrap;transition:background .18s,color .18s,border-color .18s}
+  .nav-pill:hover{background:var(--glaze)}
+  .nav-pill.active{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+
+  main{max-width:760px;margin:0 auto;padding:8px 16px 90px}
+  .block{padding-top:40px}
+  .block-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+  .block-head h2{font-family:"Fraunces",Georgia,serif;font-weight:500;font-style:italic;
+    font-size:clamp(1.5rem,4.5vw,2rem);color:var(--cobalt-deep);margin:0}
+  .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+  .note{margin:12px 0;padding-left:14px;border-left:2px solid var(--glaze-line);color:var(--ink);font-size:.93rem}
+
+  /* the literal -> natural example device (shared with the other pages) */
+  .ex{background:var(--glaze);border-radius:10px;padding:12px 15px;margin:10px 0;display:flex;flex-direction:column;gap:3px}
+  .ex-pt{font-family:"Fraunces",Georgia,serif;font-weight:600;color:var(--cobalt-deep);font-size:1.05rem}
+  .ex-lit{color:var(--ink-soft);font-style:italic;font-size:.85rem}
+  .ex-lit::before{content:"lit. ";font-style:normal;font-weight:600;opacity:.7}
+  .ex-en{color:var(--ink);font-size:.94rem;font-weight:500}
+  .ex-en::before{content:"\2192\00a0";color:var(--cobalt)}
+
+  /* question-word cards */
+  .qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+  .qcard{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:18px 19px}
+  .qcard-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+    padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--rule)}
+  .qword{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.5rem;color:var(--cobalt-deep);line-height:1}
+  .qgloss{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .card-note{margin:0 0 10px;color:var(--ink-soft);font-size:.86rem}
+  .qcard .ex:first-of-type{margin-top:0}.qcard .ex:last-child{margin-bottom:0}
+
+  /* mix-ups */
+  .mxgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+  .mxcard{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:18px 19px}
+  .mxcard h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.15rem;color:var(--cobalt-deep);margin:0 0 4px}
+  .mx-intro{margin:0 0 12px;color:var(--ink-soft);font-size:.88rem}
+  .mx-row{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:baseline;
+    padding:8px 0;border-top:1px solid var(--rule)}
+  .mx-label{grid-row:span 2;font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--cobalt);font-weight:700;align-self:center}
+  .mx-pt{font-family:"Fraunces",Georgia,serif;font-weight:600;color:var(--cobalt-deep);font-size:1.02rem}
+  .mx-en{color:var(--ink-soft);font-size:.86rem}
+  .mxcard .card-note{margin-top:12px}
+
+  footer{text-align:center;padding:34px 20px 0;color:var(--ink-soft);font-size:.82rem;max-width:34rem;margin:0 auto}
+
+  .block{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+  .block.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.block{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+  <header class="masthead">
+    <p class="kicker">Michel Thomas Method · Foundation</p>
+    <h1>Portuguese<br><em>question words</em></h1>
+    <p class="sub">Ask anything. The literal gloss shows the word-for-word; the arrow shows what it really means. European Portuguese.</p>
+  </header>
+  <nav class="navbar" aria-label="Jump to section">
+    <div class="navbar-inner">
+      <span class="navbar-label">Go to</span>
+      <div class="nav-pills"><a href="#basics" class="nav-pill" data-target="basics">Basics</a><a href="#words" class="nav-pill" data-target="words">Question words</a><a href="#mixups" class="nav-pill" data-target="mixups">Mix-ups</a></div>
+    </div>
+  </nav>
+  <main><section class="block" id="basics"><header class="block-head"><h2>How questions work</h2><span class="tag">the mechanics</span></header><p class="note">Yes/no questions need no reshuffling — just lift your voice at the end.</p><div class="ex"><span class="ex-pt">É possível?</span><span class="ex-lit">it is possible?</span><span class="ex-en">Is it possible?</span></div><p class="note">A question word goes straight to the front, then the verb. There’s no English-style “do you…” scaffolding to build.</p><p class="note">The é que booster: drop é que (“is it that”) in after the question word. It adds nothing to the meaning but sounds completely natural — you’ll hear it everywhere.</p><div class="ex"><span class="ex-pt">O que é que tem?  =  O que tem?</span><span class="ex-lit">the what is it that you have?</span><span class="ex-en">What do you have?</span></div></section><section class="block" id="words"><header class="block-head"><h2>The question words</h2><span class="tag">one card each</span></header><div class="qgrid"><div class="qcard"><div class="qcard-head"><span class="qword">o que</span><span class="qgloss">what</span></div><p class="card-note">Stands on its own. Often padded to o que é que.</p><div class="ex"><span class="ex-pt">O que é que tem?</span><span class="ex-lit">the what is it that you have?</span><span class="ex-en">What do you have?</span></div><div class="ex"><span class="ex-pt">O que quer dizer isto?</span><span class="ex-lit">the what means this?</span><span class="ex-en">What does this mean?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">que</span><span class="qgloss">what / which</span></div><p class="card-note">Used in front of a noun.</p><div class="ex"><span class="ex-pt">Que preferência tem?</span><span class="ex-en">What preference do you have?</span></div><div class="ex"><span class="ex-pt">Que tipo de música?</span><span class="ex-en">What kind of music?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">quem</span><span class="qgloss">who / whom</span></div><div class="ex"><span class="ex-pt">Quem pode fazê-lo?</span><span class="ex-en">Who can do it?</span></div><div class="ex"><span class="ex-pt">Com quem?</span><span class="ex-en">With whom?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">onde</span><span class="qgloss">where</span></div><div class="ex"><span class="ex-pt">Onde fica a casa?</span><span class="ex-lit">where is-situated the house?</span><span class="ex-en">Where is the house?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">quando</span><span class="qgloss">when</span></div><div class="ex"><span class="ex-pt">Quando tem de sair?</span><span class="ex-en">When do you have to leave?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">porque</span><span class="qgloss">why</span></div><p class="card-note">In this course, “why” takes porque (usually porque é que). Your teacher may write it porquê.</p><div class="ex"><span class="ex-pt">Porque é que não é aceitável?</span><span class="ex-lit">for what is it that not it is acceptable?</span><span class="ex-en">Why isn’t it acceptable?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">como</span><span class="qgloss">how</span></div><div class="ex"><span class="ex-pt">Como está?</span><span class="ex-en">How are you?</span></div><div class="ex"><span class="ex-pt">Como se diz…?</span><span class="ex-en">How do you say…?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">quanto</span><span class="qgloss">how much</span></div><div class="ex"><span class="ex-pt">Quanto é?</span><span class="ex-en">How much is it?</span></div><div class="ex"><span class="ex-pt">Quanto tempo?</span><span class="ex-lit">how much time?</span><span class="ex-en">How long?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">quantos / quantas</span><span class="qgloss">how many</span></div><p class="card-note">Agrees with the thing counted — quantos (m), quantas (f).</p><div class="ex"><span class="ex-pt">Quantos dias fica aqui?</span><span class="ex-en">How many days are you staying?</span></div><div class="ex"><span class="ex-pt">Quantas horas?</span><span class="ex-en">How many hours?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">a que horas</span><span class="qgloss">at what time</span></div><div class="ex"><span class="ex-pt">A que horas te levantas?</span><span class="ex-en">What time do you get up?</span></div><div class="ex"><span class="ex-pt">A que horas?</span><span class="ex-lit">at what hours?</span><span class="ex-en">At what time?</span></div></div><div class="qcard"><div class="qcard-head"><span class="qword">por que</span><span class="qgloss">which (+ noun)</span></div><p class="card-note">Literally “for what” — picks one out of a set.</p><div class="ex"><span class="ex-pt">Por que restaurante tem preferência?</span><span class="ex-lit">for what restaurant do you have preference?</span><span class="ex-en">Which restaurant do you prefer?</span></div></div></div></section><section class="block" id="mixups"><header class="block-head"><h2>Easy mix-ups</h2><span class="tag">watch these</span></header><div class="mxgrid"><div class="mxcard"><h3>porque, two jobs</h3><p class="mx-intro">Same spelling, opposite roles — intonation and context tell them apart.</p><div class="mx-row"><span class="mx-label">ask</span><span class="mx-pt">Porque é que não vem?</span><span class="mx-en">Why aren’t you coming?</span></div><div class="mx-row"><span class="mx-label">answer</span><span class="mx-pt">Porque estou cansado.</span><span class="mx-en">Because I’m tired.</span></div><p class="card-note">If your teacher writes them, “why” often appears as porquê and “because” stays porque.</p></div><div class="mxcard"><h3>o que vs que</h3><p class="mx-intro">Both are “what”, but they stand in different places.</p><div class="mx-row"><span class="mx-label">o que</span><span class="mx-pt">O que é que quer?</span><span class="mx-en">What do you want?  (alone)</span></div><div class="mx-row"><span class="mx-label">que</span><span class="mx-pt">Que preferência tem?</span><span class="mx-en">What preference?  (before a noun)</span></div></div><div class="mxcard"><h3>quanto vs quantos</h3><p class="mx-intro">Mass vs count.</p><div class="mx-row"><span class="mx-label">quanto</span><span class="mx-pt">Quanto é?</span><span class="mx-en">How much is it?</span></div><div class="mx-row"><span class="mx-label">quantos</span><span class="mx-pt">Quantos dias?</span><span class="mx-en">How many days?</span></div><p class="card-note">quantos / quantas change to match the gender of what you’re counting.</p></div></div></section>
+    <footer>Tip: almost any of these can take the é que booster — Quem é que…?, Onde é que…?, Quando é que…? — without changing the meaning.</footer>
+  </main>
+<script>
+  const pills=[...document.querySelectorAll('.nav-pill')];
+  const secs=[...document.querySelectorAll('.block')];
+  const setActive=id=>pills.forEach(p=>p.classList.toggle('active',p.dataset.target===id));
+  const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),
+    {rootMargin:'-40% 0px -55% 0px',threshold:0});
+  secs.forEach(s=>navObs.observe(s));
+  const revObs=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),
+    {rootMargin:'0px 0px -6% 0px',threshold:.04});
+  secs.forEach(s=>revObs.observe(s));
+</script>
+</body>
+</html>
