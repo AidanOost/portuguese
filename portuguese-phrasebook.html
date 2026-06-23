@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation Portuguese — Phrasebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1E9;--paper-2:#FBF9F4;--ink:#23314B;--ink-soft:#5C6678;
+    --cobalt:#2C5AA0;--cobalt-deep:#1B3B72;--glaze:#DDE7F3;--glaze-line:#C2D2E8;
+    --gold:#B07A2B;--rule:#E2DCCE;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+
+  .masthead{padding:54px 24px 26px;text-align:center;
+    background:radial-gradient(circle at 50% -40%, var(--glaze), transparent 60%),var(--paper)}
+  .kicker{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--cobalt);font-weight:600;margin:0 0 14px}
+  .masthead h1{font-family:"Fraunces",Georgia,serif;font-weight:500;
+    font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.04;margin:0;color:var(--cobalt-deep)}
+  .masthead h1 em{font-style:italic;color:var(--cobalt)}
+  .sub{margin:16px auto 0;max-width:30rem;color:var(--ink-soft);font-size:.94rem}
+
+  .navbar{position:sticky;top:0;z-index:20;background:rgba(244,241,233,.86);
+    backdrop-filter:blur(10px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .navbar-inner{max-width:760px;margin:0 auto;padding:9px 16px;display:flex;align-items:center;gap:10px}
+  .navbar-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+  .nav-pills{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+  .nav-pills::-webkit-scrollbar{display:none}
+  .nav-pill{flex:0 0 auto;padding:5px 13px;border-radius:20px;text-decoration:none;
+    font-weight:600;font-size:.82rem;color:var(--cobalt);border:1px solid var(--glaze-line);
+    background:var(--paper-2);white-space:nowrap;transition:background .18s,color .18s,border-color .18s}
+  .nav-pill:hover{background:var(--glaze)}
+  .nav-pill.active{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+
+  main{max-width:760px;margin:0 auto;padding:8px 16px 90px}
+  .block{padding-top:40px}
+  .block-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+  .block-head h2{font-family:"Fraunces",Georgia,serif;font-weight:500;font-style:italic;
+    font-size:clamp(1.5rem,4.5vw,2rem);color:var(--cobalt-deep);margin:0}
+  .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+  .card{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:6px 20px}
+  .phrase{display:flex;flex-direction:column;gap:2px;padding:14px 0;border-top:1px solid var(--rule)}
+  .phrase:first-child{border-top:none}
+  .ph-pt{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.12rem;color:var(--cobalt-deep)}
+  .ph-en{color:var(--ink);font-size:.95rem}
+  .ph-en::before{content:"\2192\00a0";color:var(--cobalt)}
+  .ph-lit{color:var(--ink-soft);font-style:italic;font-size:.82rem}
+  .ph-lit::before{content:"lit. ";font-style:normal;font-weight:600;opacity:.7}
+
+  footer{text-align:center;padding:34px 20px 0;color:var(--ink-soft);font-size:.82rem;max-width:34rem;margin:0 auto}
+
+  .block{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+  .block.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.block{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+  <header class="masthead">
+    <p class="kicker">Michel Thomas Method · Foundation</p>
+    <h1>Portuguese<br><em>phrasebook</em></h1>
+    <p class="sub">Things to actually say, grouped by what you're trying to do. Built from words and grammar the course gives you. European Portuguese.</p>
+  </header>
+  <nav class="navbar" aria-label="Jump to section">
+    <div class="navbar-inner">
+      <span class="navbar-label">Go to</span>
+      <div class="nav-pills"><a href="#greetings" class="nav-pill" data-target="greetings">Greetings &amp; courtesies</a><a href="#understood" class="nav-pill" data-target="understood">Making yourself understood</a><a href="#wants" class="nav-pill" data-target="wants">Wants, needs &amp; feelings</a><a href="#eating" class="nav-pill" data-target="eating">Eating out</a><a href="#shopping" class="nav-pill" data-target="shopping">Shopping &amp; money</a><a href="#time" class="nav-pill" data-target="time">Time &amp; plans</a><a href="#around" class="nav-pill" data-target="around">Getting around</a><a href="#connectors" class="nav-pill" data-target="connectors">Handy connectors</a></div>
+    </div>
+  </nav>
+  <main><section class="block" id="greetings"><header class="block-head"><h2>Greetings &amp; courtesies</h2><span class="tag">first words</span></header><div class="card"><div class="phrase"><span class="ph-pt">Bom dia.</span><span class="ph-en">Good morning / hello.</span></div><div class="phrase"><span class="ph-pt">Boa tarde.</span><span class="ph-en">Good afternoon / evening.</span></div><div class="phrase"><span class="ph-pt">Como está?</span><span class="ph-en">How are you?</span></div><div class="phrase"><span class="ph-pt">Muito obrigado. / Muito obrigada.</span><span class="ph-en">Thank you very much.</span><span class="ph-lit">said by a man / a woman</span></div><div class="phrase"><span class="ph-pt">Por favor.</span><span class="ph-en">Please.</span></div><div class="phrase"><span class="ph-pt">Desculpe.</span><span class="ph-en">Excuse me.</span></div><div class="phrase"><span class="ph-pt">Sim. / Não.</span><span class="ph-en">Yes. / No.</span></div><div class="phrase"><span class="ph-pt">Lamento.</span><span class="ph-en">I'm sorry.</span><span class="ph-lit">I lament</span></div></div></section><section class="block" id="understood"><header class="block-head"><h2>Making yourself understood</h2><span class="tag">when you're stuck</span></header><div class="card"><div class="phrase"><span class="ph-pt">Pode falar mais lento, por favor?</span><span class="ph-en">Can you speak more slowly, please?</span></div><div class="phrase"><span class="ph-pt">O que quer dizer isto?</span><span class="ph-en">What does this mean?</span><span class="ph-lit">the what means this?</span></div><div class="phrase"><span class="ph-pt">Posso falar português contigo?</span><span class="ph-en">Can I speak Portuguese with you?</span></div><div class="phrase"><span class="ph-pt">Não compreendo.</span><span class="ph-en">I don't understand.</span></div><div class="phrase"><span class="ph-pt">Pode dizer-me…?</span><span class="ph-en">Can you tell me…?</span></div></div></section><section class="block" id="wants"><header class="block-head"><h2>Wants, needs &amp; feelings</h2><span class="tag">saying what you want</span></header><div class="card"><div class="phrase"><span class="ph-pt">Quero saber.</span><span class="ph-en">I want to know.</span></div><div class="phrase"><span class="ph-pt">Não quero saber.</span><span class="ph-en">I don't want to know.</span></div><div class="phrase"><span class="ph-pt">Preciso de…</span><span class="ph-en">I need…</span></div><div class="phrase"><span class="ph-pt">Gostaria de…</span><span class="ph-en">I would like to…</span></div><div class="phrase"><span class="ph-pt">Queria…</span><span class="ph-en">I would like…</span><span class="ph-lit">I wanted</span></div><div class="phrase"><span class="ph-pt">Tenho fome.</span><span class="ph-en">I'm hungry.</span><span class="ph-lit">I have hunger</span></div><div class="phrase"><span class="ph-pt">Estou cansado. / Estou cansada.</span><span class="ph-en">I'm tired.</span><span class="ph-lit">m / f</span></div><div class="phrase"><span class="ph-pt">Estou ocupado. / Estou ocupada.</span><span class="ph-en">I'm busy.</span><span class="ph-lit">m / f</span></div><div class="phrase"><span class="ph-pt">Tenho de sair.</span><span class="ph-en">I have to leave.</span></div></div></section><section class="block" id="eating"><header class="block-head"><h2>Eating out</h2><span class="tag">at the restaurant</span></header><div class="card"><div class="phrase"><span class="ph-pt">Tem preferência?</span><span class="ph-en">Do you have a preference?</span></div><div class="phrase"><span class="ph-pt">Que tipo de restaurante?</span><span class="ph-en">What kind of restaurant?</span></div><div class="phrase"><span class="ph-pt">Quero jantar.</span><span class="ph-en">I want to have dinner.</span></div><div class="phrase"><span class="ph-pt">Pode fazer uma reserva?</span><span class="ph-en">Can you make a reservation?</span></div><div class="phrase"><span class="ph-pt">Para esta noite.</span><span class="ph-en">For tonight.</span></div><div class="phrase"><span class="ph-pt">Quanto é?</span><span class="ph-en">How much is it?</span></div></div></section><section class="block" id="shopping"><header class="block-head"><h2>Shopping &amp; money</h2><span class="tag">buying things</span></header><div class="card"><div class="phrase"><span class="ph-pt">Quanto é?</span><span class="ph-en">How much is it?</span></div><div class="phrase"><span class="ph-pt">É muito caro.</span><span class="ph-en">It's very expensive.</span></div><div class="phrase"><span class="ph-pt">É demasiado caro.</span><span class="ph-en">It's too expensive.</span></div><div class="phrase"><span class="ph-pt">Quero comprar isto.</span><span class="ph-en">I want to buy this.</span></div><div class="phrase"><span class="ph-pt">Não vou comprá-lo.</span><span class="ph-en">I'm not going to buy it.</span></div><div class="phrase"><span class="ph-pt">Tem…?</span><span class="ph-en">Do you have…?</span></div></div></section><section class="block" id="time"><header class="block-head"><h2>Time &amp; plans</h2><span class="tag">when things happen</span></header><div class="card"><div class="phrase"><span class="ph-pt">A que horas?</span><span class="ph-en">At what time?</span><span class="ph-lit">at what hours?</span></div><div class="phrase"><span class="ph-pt">Quando tem de sair?</span><span class="ph-en">When do you have to leave?</span></div><div class="phrase"><span class="ph-pt">Vou ligar-te esta noite.</span><span class="ph-en">I'm going to call you tonight.</span></div><div class="phrase"><span class="ph-pt">Ligo-te mais tarde.</span><span class="ph-en">I'll call you later.</span><span class="ph-lit">present tense carries the future</span></div><div class="phrase"><span class="ph-pt">Acabei de chegar.</span><span class="ph-en">I've just arrived.</span></div><div class="phrase"><span class="ph-pt">Hoje. / Amanhã. / Ontem.</span><span class="ph-en">Today. / Tomorrow. / Yesterday.</span></div></div></section><section class="block" id="around"><header class="block-head"><h2>Getting around</h2><span class="tag">places &amp; staying</span></header><div class="card"><div class="phrase"><span class="ph-pt">Onde fica a casa?</span><span class="ph-en">Where is the house?</span><span class="ph-lit">where is-situated the house?</span></div><div class="phrase"><span class="ph-pt">Fica aqui.</span><span class="ph-en">It's here.</span></div><div class="phrase"><span class="ph-pt">Quanto tempo fica aqui?</span><span class="ph-en">How long are you staying?</span></div><div class="phrase"><span class="ph-pt">Quantos dias?</span><span class="ph-en">How many days?</span></div><div class="phrase"><span class="ph-pt">Vou ficar uns dias.</span><span class="ph-en">I'm going to stay a few days.</span></div></div></section><section class="block" id="connectors"><header class="block-head"><h2>Handy connectors</h2><span class="tag">small but constant</span></header><div class="card"><div class="phrase"><span class="ph-pt">… porque …</span><span class="ph-en">… because …</span></div><div class="phrase"><span class="ph-pt">… mas …</span><span class="ph-en">… but …</span></div><div class="phrase"><span class="ph-pt">… se possível.</span><span class="ph-en">… if possible.</span></div><div class="phrase"><span class="ph-pt">Não há problema.</span><span class="ph-en">There's no problem.</span></div><div class="phrase"><span class="ph-pt">Mais ou menos.</span><span class="ph-en">More or less.</span></div></div></section>
+    <footer>Everything here uses only Foundation-course vocabulary and grammar — so if you've done the audio, you can already say all of it.</footer>
+  </main>
+<script>
+  const pills=[...document.querySelectorAll('.nav-pill')];
+  const secs=[...document.querySelectorAll('.block')];
+  const setActive=id=>pills.forEach(p=>p.classList.toggle('active',p.dataset.target===id));
+  const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),
+    {rootMargin:'-40% 0px -55% 0px',threshold:0});
+  secs.forEach(s=>navObs.observe(s));
+  const revObs=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),
+    {rootMargin:'0px 0px -6% 0px',threshold:.04});
+  secs.forEach(s=>revObs.observe(s));
+</script>
+</body>
+</html>
